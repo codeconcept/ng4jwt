@@ -1,0 +1,15 @@
+<div>
+  <form #f="ngForm" (ngSubmit)="loginUser(f.value)">
+        <div class="form-group">
+          <label for="username">Email</label>
+          <input type="text" class="form-control" placeholder="email" name="email" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="username" class="">Password</label>
+          <input type="password" class="form-control" placeholder="password" name="password" ngModel required>
+        </div>
+        <button type="submit" class="btn btn-primary">se connecter</button>
+  </form>
+
+  <div>{{ result }}</div>
+</div>

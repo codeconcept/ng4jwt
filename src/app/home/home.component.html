@@ -1,0 +1,4 @@
+<p>
+  <a routerLink="/login" *ngIf="!isLoggedIn">se connecter</a>
+  <a (click)="logout()" routerLink="/home" *ngIf="isLoggedIn">se déconnecter</a>
+</p>
