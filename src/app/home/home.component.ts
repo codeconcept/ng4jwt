@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   isLoggedIn: boolean = false;
 
-  constructor() { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit() {
-    if(localStorage.getItem('token')){
+    if(this.auth.isStillAuthenticated()){
       this.isLoggedIn = true;
     }
   }
